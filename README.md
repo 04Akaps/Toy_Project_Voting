@@ -15,7 +15,7 @@ Back_end : TypeScript
 
 - `main`
 
-  03.09 - 2 : Solidity코드 얼추 마무리, Truffle & HDwallet?? 이쪽 버전상의 문제인지 Truffle부분으로 배포가 안되어서 일단 Remix에서 배포후 값을 따옴
+03.09 - 2 : Solidity코드 얼추 마무리, Truffle & HDwallet?? 이쪽 버전상의 문제인지 Truffle부분으로 배포가 안되어서 일단 Remix에서 배포후 값을 따옴
 
 - `Solidity`
 
