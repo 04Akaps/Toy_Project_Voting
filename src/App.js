@@ -1,23 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
+import { useEffect, useState } from "react";
+import { Route, Switch } from "react-router-dom";
+import "./App.css";
+import { Nav, Nav_bottom, Service, Mypage, Proposal } from "./components/main";
 
 function App() {
+  const [Logined, SetLogined] = useState(
+    false || localStorage.getItem("logined")
+  );
+  const [Address, SetAddress] = useState("");
+
+  useEffect(async () => {
+    if (Logined !== null && Logined !== false) {
+      const account = await window.klaytn.enable();
+      SetAddress(account[0]);
+    } else {
+      SetAddress("");
+    }
+  }, [Logined]);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Nav />
+      <Switch>
+        <Route exact path="/">
+          <Nav_bottom />
+          <Service />
+        </Route>
+        <Route path="/MyPage">
+          <Mypage />
+        </Route>
+        <Route path="/Proposal">
+          <Proposal />
+        </Route>
+      </Switch>
     </div>
   );
 }
