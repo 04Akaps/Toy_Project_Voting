@@ -1,0 +1,89 @@
+.Proposal_app {
+  background-color: black;
+  min-height: 100vh;
+
+  .Proposal_container {
+    color: #fff;
+    font-weight: 800;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    min-height: 40vh;
+    justify-content: space-around;
+  }
+}
+
+.Proposal_input {
+  width: 300px;
+  padding: 10px;
+  border-radius: 12px;
+  border: none;
+  margin-top: 10px;
+  background-color: rgb(55, 47, 71);
+  box-shadow: rgb(74 74 104 / 10%) 0px 2px 2px -1px;
+  display: block;
+  color: #fff;
+  &:focus {
+    outline: 3px solid rgb(31, 199, 150);
+  }
+}
+
+.Proposal_input_types {
+  padding: 10px;
+  border-radius: 12px;
+  border: none;
+  margin-top: 10px;
+  background-color: rgb(55, 47, 71);
+  box-shadow: rgb(74 74 104 / 10%) 0px 2px 2px -1px;
+  display: block;
+  color: #fff;
+  &:focus {
+    outline: 3px solid rgb(31, 199, 150);
+  }
+}
+
+.Proposal_textarea {
+  width: 500px;
+  min-height: 300px;
+  border: none;
+  resize: none;
+  background-color: rgb(55, 47, 71);
+  box-shadow: rgb(74 74 104 / 10%) 0px 2px 2px -1px;
+  display: block;
+  color: #fff;
+  font-size: 20px;
+  padding: 10px;
+  &:focus {
+    outline: 3px solid rgb(31, 199, 150);
+  }
+}
+
+.Proposal_button {
+  width: 100px;
+  min-height: 30px;
+  margin-top: 10px;
+  border-radius: 16px;
+  border: none;
+  box-shadow: 1px 1px 1px 1px black;
+  background: linear-gradient(
+    139.73deg,
+    rgb(49, 61, 92) 0%,
+    rgb(61, 42, 84) 100%
+  );
+  color: #fff;
+  font-weight: 800;
+  cursor: pointer;
+  &:hover {
+    transform: scale(1.1);
+    transition: 0.5s;
+  }
+}
+
+.errorMessage {
+  color: #cd4275;
+  font-weight: 600;
+  margin-top: 5px;
+}
