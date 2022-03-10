@@ -1,4 +1,74 @@
-.Detail_App{
-    min-height : 95vh;
-    background-color:black;
+.Detail_App {
+  min-height: 95vh;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  .Detail_upper_Container {
+    width: 100%;
+    min-height: 200px;
+    background: linear-gradient(
+      139.73deg,
+      rgb(49, 61, 92) 0%,
+      rgb(61, 42, 84) 100%
+    );
+    color: black;
+    .Upper_Container_div {
+      width: 80%;
+      margin-top: 40px;
+      margin-bottom: 40px;
+      margin-left: auto;
+      margin-right: auto;
+      display: flex;
+      flex-direction: column;
+
+      .Upper_Conatiner_h2 {
+        font-weight: 800;
+        font-size: 2em;
+        width: max-content;
+        border: none;
+        color: rgb(154, 106, 255);
+      }
+      .Upper_Conatiner_under_div {
+        margin-top: 10px;
+        font-size: 1.7em;
+        color: #fff;
+      }
+      .Upper_Container_span {
+        margin-top: 10px;
+        color: #fff;
+      }
+    }
+  }
+
+  .Detail_bottom_Container {
+    color: #fff;
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+
+    .Detail_bottom_Content_div {
+      margin-top: 100px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      min-height: 150px;
+      border-radius: 16px;
+      background: linear-gradient(
+        139.73deg,
+        rgb(49, 61, 92) 0%,
+        rgb(61, 42, 84) 100%
+      );
+      .Detail_bottom_Conetnt_upper_div {
+        margin-left: 20px;
+      }
+      .Detail_bottom_Conetnt_bottom_div {
+        margin-left: 20px;
+      }
+    }
+  }
+}
+
+.Detail_bottom_Content_h2 {
+  color: rgb(154, 106, 255);
+  margin-bottom: 10px;
 }
