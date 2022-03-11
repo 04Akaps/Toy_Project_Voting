@@ -24,14 +24,59 @@ export const make_Tx = async (data) => {
   };
 };
 
-
-export const Unix_timestamp = (time) =>{
-  let date = new Date(time * 1000)
+export const Unix_timestamp = (time) => {
+  let date = new Date(time * 1000);
   let year = date.getFullYear();
-  let month = "0" + (date.getMonth()+1);
-    let day = "0" + date.getDate();
-    let hour = "0" + date.getHours();
-    let minute = "0" + date.getMinutes();
-    let second = "0" + date.getSeconds();
-    return year + "-" + month.substr(-2) + "-" + day.substr(-2) + " " + hour.substr(-2) + ":" + minute.substr(-2) + ":" + second.substr(-2)
-}
+  let month = "0" + (date.getMonth() + 1);
+  let day = "0" + date.getDate();
+  let hour = "0" + date.getHours();
+  let minute = "0" + date.getMinutes();
+  let second = "0" + date.getSeconds();
+  return (
+    year +
+    "-" +
+    month.substr(-2) +
+    "-" +
+    day.substr(-2) +
+    " " +
+    hour.substr(-2) +
+    ":" +
+    minute.substr(-2) +
+    ":" +
+    second.substr(-2)
+  );
+};
+
+export const timestamp = (time) => {
+  let date = new Date(time);
+  let year = date.getFullYear();
+  let month = "0" + (date.getMonth() + 1);
+  let day = "0" + date.getDate();
+  let hour = "0" + date.getHours();
+  let minute = "0" + date.getMinutes();
+  let second = "0" + date.getSeconds();
+  return (
+    year +
+    "-" +
+    month.substr(-2) +
+    "-" +
+    day.substr(-2) +
+    " " +
+    hour.substr(-2) +
+    ":" +
+    minute.substr(-2) +
+    ":" +
+    second.substr(-2)
+  );
+};
+
+export const check_time = (time) => {
+  let real_time = Unix_timestamp(Number(time));
+
+  let date = timestamp(new Date());
+  if (date < real_time) {
+    return true;
+  } else {
+    return false;
+  }
+};

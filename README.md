@@ -23,4 +23,8 @@ Back_end : TypeScript
 
 - `main`
 
+  03.11 - 1 : Solidity코드 살짝 수정 및 caver-js연동 완료, 프론트 작업 마무리, 이후 TypeScript를 활용하여 Node 서버 구성 후 종료시간이 된 Voting은 종료 시킬 예정
+
+- `main`
+
 velog - https://velog.io/@jjimgo/Voting-사이트

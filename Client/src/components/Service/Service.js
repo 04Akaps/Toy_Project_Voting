@@ -1,4 +1,3 @@
-import { Button } from "@mui/material";
 import React, { useState, useEffect } from "react";
 import { Voting_Contract } from "../Contract/Caver";
 import { make_Tx, Unix_timestamp } from "../function";
