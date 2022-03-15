@@ -5,6 +5,7 @@ import { caver } from "../Contract/Caver";
 import { Link } from "react-router-dom";
 
 import "./Service.scss";
+import { check_time_for_delete } from "../Caver_function";
 function Service() {
   const [Data, SetData] = useState(null);
 
@@ -18,6 +19,8 @@ function Service() {
         });
     });
   }, []);
+
+  check_time_for_delete();
 
   const Vote_Now = async (index) => {
     Voting_Contract().then(async (method) => {

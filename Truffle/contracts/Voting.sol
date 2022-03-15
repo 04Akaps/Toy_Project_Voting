@@ -18,6 +18,7 @@ contract Voting is Voting_modifier {
     uint256 public total_proposal_count = 0;
     uint256 require_count = 10; // 얼마만큼의 동의를 얻어야 수행이 가능한지를 표시, 일종의 목표값
     uint256 check_index = 0;
+
     constructor() {
         owner = msg.sender; // 특정 조건값을 바꾸는데에는 주인 계정만 사용이 가능하게 하기 위해
     }
@@ -55,8 +56,8 @@ contract Voting is Voting_modifier {
             title: _title,
             types: _types,
             content: _content,
-            end_time : block.timestamp + 1 days,
-            id : check_index,
+            end_time: block.timestamp + 1 days,
+            id: check_index,
             status: Status.playing
         });
         my_proposal_list[msg.sender]++;
@@ -77,7 +78,7 @@ contract Voting is Voting_modifier {
         pos.count++;
     }
 
-    function done_Proposal(uint256 index) public {
+    function done_Proposal(uint256 index) public onlyOwner {
         // 제안을 끝내는 함수
         // 반드시 요구되는 카운트 보다 많아야 종료가 가능
         Proposal storage pos = proposal_list[index];
