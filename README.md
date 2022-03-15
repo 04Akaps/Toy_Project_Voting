@@ -35,3 +35,5 @@ Back_end : TypeScript
 - `해야하는 일이 있어서 많이 미흡한 프로젝트고 Css도 자기 마음대로지만 그래도 재미있는 작업이였다.`
 
 velog - https://velog.io/@jjimgo/Voting-사이트
+
+Youtube - https://www.youtube.com/watch?v=CDfhtsWtilE
